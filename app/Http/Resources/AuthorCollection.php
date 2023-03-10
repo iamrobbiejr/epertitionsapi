@@ -14,6 +14,10 @@ class AuthorCollection extends ResourceCollection
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'version' => '0.1.1',
+            'author' => 'Robby',
+            'data' => $this->collection
+        ];
     }
 }

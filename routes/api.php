@@ -22,6 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('/pertitions', PertitionController::class);
 
-Route::resource('/authors', AuthorController::class, 'index')->only([
+Route::resource('/authors', AuthorController::class)->only([
     'index', 'show'
 ]);
